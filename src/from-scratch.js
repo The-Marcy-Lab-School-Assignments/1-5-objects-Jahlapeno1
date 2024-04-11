@@ -1,19 +1,36 @@
-const coolGreeting = () => {
+const coolGreeting = (obj) => {
+  return obj.isCool ? `What is UP ${obj.name.toUpperCase()}? How you been doin'?` : `Greetings ${obj.name}, how have you been lately?`
 };
 
-const haveBirthday = () => {
+const haveBirthday = (obj) => {
+  obj.age += 1
 };
 
-const becomeSecretAgent = () => {
+const becomeSecretAgent = (obj, spyHandle) => {
+  delete obj.name
+  obj.spyHandle = spyHandle
+
 };
 
-const carMaker = () => {
+const carMaker = (name, maker, year) => {
+  const car = {
+    name: name,
+    maker: maker,
+    year: year,
+    needsOilChange: false,
+  }
+  return car
 };
 
-const weAreNotFriends = () => {
+const weAreNotFriends = (obj) => {
+  let lastName = obj.friends.pop()
+  return lastName
 };
 
-const listHobbies = () => {
+const listHobbies = (obj) => {
+  for (let i = 0; i < obj.hobbies.length; i++) {
+    console.log(`${obj.name} likes ${obj.hobbies[i]}.`)
+  }
 };
 
 const getNextOpponent = () => {
