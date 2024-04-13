@@ -33,16 +33,24 @@ const listHobbies = (obj) => {
   }
 };
 
-const getNextOpponent = () => {
+const getNextOpponent = (obj) => {
+  if (obj.matches[0] === undefined) {
+    return null
+  } else {
+    return obj.matches[0].teamName
+  }
 };
 
-const listAllKeys = () => {
+const listAllKeys = (obj) => {
+  return Object.keys(obj)
 };
 
-const listAllValues = () => {
+const listAllValues = (obj) => {
+  return Object.values(obj)
 };
 
-const convertToMatrix = () => {
+const convertToMatrix = (arrOfObj) => {
+
 };
 
 module.exports = {
