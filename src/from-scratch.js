@@ -50,7 +50,13 @@ const listAllValues = (obj) => {
 };
 
 const convertToMatrix = (arrOfObj) => {
-
+  if (arrOfObj[0] === undefined || arrOfObj[0] === null) return []
+  const totalArr = []
+  totalArr.push(Object.keys(arrOfObj[0]))
+  for (let e in arrOfObj) {
+    totalArr.push(Object.values(arrOfObj[e]))
+  }
+  return totalArr
 };
 
 module.exports = {
