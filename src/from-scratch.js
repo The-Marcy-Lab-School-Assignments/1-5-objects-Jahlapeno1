@@ -1,7 +1,8 @@
+/** FEEDBACK: Overall great job passing all test cases! */
 const coolGreeting = (obj) => {
   return obj.isCool ? `What is UP ${obj.name.toUpperCase()}? How you been doin'?` : `Greetings ${obj.name}, how have you been lately?`
 };
-
+/** FEEDBACK: You could also do ++ and it will work the same! */
 const haveBirthday = (obj) => {
   obj.age += 1
 };
